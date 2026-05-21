@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Native Infrastructure Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="logo-area">
+                <h2>CG LAB</h2>
+                <span class="user-tag">Engineer: CHANG GYU</span>
+            </div>
+            <nav class="navigation">
+                <ul>
+                    <li class="active">📊 Overview</li>
+                    <li>📦 Kubernetes</li>
+                    <li>🐳 Docker Hub</li>
+                    <li>⚙️ Jenkins CI/CD</li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Infrastructure Automation Monitoring</h1>
+                <div class="status-badge">SYSTEM ONLINE</div>
+            </header>
+
+            <section class="card-grid">
+                <div class="card success">
+                    <h3>Jenkins CI Status</h3>
+                    <p class="value">SUCCESS</p>
+                    <span class="subtext">Auto Trigger Enabled</span>
+                </div>
+                <div class="card primary">
+                    <h3>ArgoCD / K8s</h3>
+                    <p class="value">RUNNING</p>
+                    <span class="subtext">Pods: Active (Healthy)</span>
+                </div>
+                <div class="card info">
+                    <h3>Docker Registry</h3>
+                    <p class="value">v1.0.0</p>
+                    <span class="subtext">parkck93/projectapp</span>
+                </div>
+            </section>
+
+            <section class="console-section">
+                <h3>Deployment Terminal Live Log</h3>
+                <div class="console-box" id="consoleBox">
+                    <p class="log-line">[SYSTEM] Initializing automation pipeline...</p>
+                    <p class="log-line">[JENKINS] Webhook triggered from GitHub repository.</p>
+                    <p class="log-line">[DOCKER] Build success: parkck93/projectapp:v1 (No-Cache)</p>
+                    <p class="log-line">[ANSIBLE] Transferring k8s_deploy.yaml blueprint to Control-Plane...</p>
+                    <p class="log-line success-text">[K8S] kubectl rollout restart successful. Pods are updated!</p>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
